@@ -13,19 +13,23 @@ var drawR = function() {
     var dy = 4;
     var x = 250;
     var y = 250;    
-
+    
+    var img = new Image();
+    img.src = 'dvd.png'
+    
     var animCode = function() {
 	console.log(x);
 	console.log(y);
         ctx.clearRect(0,0,c.width,c.height);
 	
-	if (x + dx > c.width-50 || x + dx < 0) {
+	if (x + dx > c.width-100 || x + dx < 0) {
 	    dx = -dx;
 	}
-	if (y + dy > c.height-25 || y + dy < 0) {
+	if (y + dy > c.height-51 || y + dy < 0) {
 	    dy = -dy;
 	}	
-	ctx.fillRect(x,y,50,25);
+	//ctx.fillRect(x,y,100,51);
+	ctx.drawImage(img,x,y);
 	x += dx;
 	y += dy;
 	frameid = window.requestAnimationFrame(animCode);
