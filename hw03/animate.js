@@ -6,20 +6,19 @@ var ctx = c.getContext("2d");
 ctx.fillStyle= "#FF0000";
 var frameid;
 
-
 var drawR = function() {
 
-    var dx = 2;
+    var dx = 4;
     var dy = 4;
     var x = 250;
-    var y = 250;    
+    var y = 250;
     
     var img = new Image();
     img.src = 'dvd.png'
     
     var animCode = function() {
-	console.log(x);
-	console.log(y);
+	//console.log(x);
+	//console.log(y);
         ctx.clearRect(0,0,c.width,c.height);
 	
 	if (x + dx > c.width-100 || x + dx < 0) {
