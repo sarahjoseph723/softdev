@@ -8,8 +8,8 @@ var frameid;
 
 var drawR = function() {
 
-    var dx = 4;
-    var dy = 4;
+    var dx = 2;
+    var dy = 2;
     var x = 250;
     var y = 250;
     
