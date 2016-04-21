@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+  <title>Haskell</title>
+  <link rel="stylesheet" type="txt/css" href="style.css">
+</head>
+<body>
+  <ul id="nav">
+    <li><a id="h" href="haskell.html"><img src="logo.png" height="14px" width="14px"> Haskell</a></li>
+    <li><a href="syntax.html">Syntax</a></li>
+    <li><a href="download.html">Download</a></li>
+  </ul>
+  <div id="txt">
+    <h1 align="center">Syntax</h1>
+    <h3>The Basics</h3>
+    <p>Haskell is case sensitive, utilizes types, has no <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">side effects</a>, and can take functions as parameters for other functions. </p>
+    <h3> Tuples and Lists </h3>
+    <p>Tuples can hold heterogeneous data types.</p>
+    <div class="codebox">
+      <code>(5,3)<br>
+	(5,3.0)<br>
+	fst(5,3) <var>will return</var> 5<br></code>
+    </div>
+    <p> Haskell uses lists a lot. Unlike tuples, lists must be composed of homogenous data types. </p>
+    <div class="codebox">
+      <code>ex = [1,2,3]</code>
+    </div>
+    <p>The colon is the <code>cons</code> operator (add an element to the begining of a list). All lists in Haskell are just representations of a bunch of cons operations for each element with an empty list. This is called <a href="https://wiki.haskell.org/Syntactic_sugar">syntactic sugar</a>.</p>
+    <div class="codebox">
+      <code>5:ex <var>will return</var> [5,1,2,3]</code>
+    </div>
+    <h3>Strings</h3>
+    <p>In Haskell, strings are just lists of characters.</p>
+    <div class="codebox">
+      <code>word = 'h':'e':'l':'l':'o':[] <var>will return</var> &#34hello&#34</code>
+    </div>
+    <p>Lists and strings can be concatenated with the <code>++</code> operator.</p>
+    <div class="codebox">
+      <code>word2 = &#34hello&#34 ++ &#34 world&#34 <var>will return</var> &#34hello world&#34</code>
+      </div>
+    <h3>Functions</h3>
+    <p>Unlike many other languages, Haskell doesn't separate the parameters of its funcitons with parentheses.</p>
+    <div class="codebox">
+      <code>square x = x * x<br>
+      square 3 <var>will return</var> 9
+      square 5 <var>will return</var> 25</code>
+    </div>
+    <p>Functions in Haskell can take other functions as parameters.</p>
+    <div class="codebox">
+      <code>test = [1,2,3,4,5]<br>
+	foldr (+) 0 test --takes a function, initial value, and list as arguments<br><var>will return</var> 15<br>
+	0+1+2+3+4+5 = 15</code>
+    </div>
+    <h3>Pattern Matching</h3>
+    <p>A way to get values from other values using patterns.</p>
+    <div class="codebox">
+      <code>let (a,b) = (10,12) in a * 2 <var>will return</var> 20<br> 
+let (a:b:c:[]) = &#34xyz&#34 in a <var>will return</var> &#39x&#39<br>
+let (a:_:_:[]) = &#34xyz&#34 in a <var>will return</var> &#39x&#39<br>
+let (a:_) = &#34xyz&#34 in a <var>will return</var> &#39x&#39</code>
+    </div>
+
+    <h3>Want More?</h3>
+    <p> For a full tutorial, click <a href="https://www.haskell.org/">here.</a><br><br><br></p>
+  </div>
+
+</body>
+</html>

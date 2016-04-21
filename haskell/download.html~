@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+  <title>Haskell</title>
+  <link rel="stylesheet" type="txt/css" href="style.css">
+</head>
+<body>
+  <ul id="nav">
+    <li><a id="h" href="haskell.html"><img src="logo.png" height="14px" width="14px"> Haskell</a></li>
+    <li><a href="syntax.html">Syntax</a></li>
+    <li><a href="download.html">Download</a></li>
+  </ul>
+</body>
+</html>
